@@ -112,7 +112,7 @@ export class GuiModel {
                         {
                             "id":   "activity",
                             "type": "autocomplete",
-                            "name": "Activity",
+                            "name": "activity",
                             "url": "/activity",
                             "defaultKey": "activityKey",
                             "readonly": true,
@@ -174,7 +174,29 @@ export class GuiModel {
                     "name": "Activity Name", 
                     "width": 2, 
                     "required": true 
-                }, 
+                },
+                {
+                    "id": "location",
+                    "type": "autocomplete",
+                    "name": "Location",
+                    "url": "/location",
+                    "form": "LocationForm",
+                    "width": 2
+                },
+                {
+                    "id": "date",
+                    "type": Date,
+                    "name": "Date",
+                    "width": 2,
+                    "required": true
+                },
+                {
+                    "id": "comments",
+                    "type": "text",
+                    "name": "Comments",
+                    "width": 2,
+                    "required": true
+                },
                 { 
                     "type": "deleteButton", 
                     "name": "Delete" 
@@ -217,7 +239,7 @@ export class GuiModel {
                         {
                             "type": "button",
                             "name": "Activity",
-                            "icon": "fa-user",
+                            "icon": "fa-activity",
                             "color": "orange",
                             "page": "activitypage",
                             },
